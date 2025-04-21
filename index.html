@@ -9,6 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/index.css" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PKCR4BFMDG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PKCR4BFMDG');
+    </script>
   </head>
   <body>
     <div id="app">
@@ -138,9 +147,54 @@
         <!-- CONTACTO+ 지금 바로 협업하세요! -->
         <img src="/src/assets/images/image8.png" alt="Contacto App Mockups CTA" class="cta-mockups">
         <h2 class="cta-text">CONTACTO에서<br>지금 바로 협업하세요!</h2>
+        <!-- Add App Store download button -->
+        <a href="https://apps.apple.com/kr/app/contacto/id6736873767?utm_source=landing&utm_medium=organic&utm_campaign=general" 
+           id="app-download-cta" 
+           class="cta-button app-download-button" 
+           target="_blank" 
+           rel="noopener noreferrer">
+          App Download (iOS only) →
+        </a>
       </section>
     </div>
     <!-- If using React/Vue/etc., the script tag might be different -->
     <!-- <script type="module" src="/src/main.tsx"></script> -->
+
+    <script>
+      // Add GA event tracking for feature2 buttons
+      const feature2Buttons = document.querySelectorAll('.feature2-button');
+      feature2Buttons.forEach(button => {
+        button.addEventListener('click', function() {
+          const buttonText = button.textContent || 'unknown_button'; // Get button text
+          console.log('Feature 2 Button Clicked:', buttonText); // Optional: Log to console
+
+          // Send event to Google Analytics
+          if (typeof gtag === 'function') {
+            gtag('event', 'button_click', {
+              'event_category': 'Feature2Buttons',
+              'event_label': buttonText.trim(), // Send button text as label
+              // 'value': 1 // Optional: You can assign a value
+            });
+          }
+        });
+      });
+
+      // Add GA event tracking for the CTA App Download button
+      const ctaButton = document.getElementById('app-download-cta');
+      if (ctaButton) {
+        ctaButton.addEventListener('click', function() {
+          console.log('CTA App Download Button Clicked'); // Optional: Log
+
+          // Send event to Google Analytics
+          if (typeof gtag === 'function') {
+            gtag('event', 'button_click', {
+              'event_category': 'CTA',
+              'event_label': 'AppStoreDownload',
+              // 'value': 10 // Optional
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>

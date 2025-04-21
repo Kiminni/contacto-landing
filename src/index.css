@@ -291,6 +291,30 @@ section {
   line-height: 1.4;
 }
 
+/* Style for the App Download button */
+.app-download-button {
+  display: inline-block;
+  background-color: #BAEF62; /* Lime green */
+  color: #000000; /* Black text */
+  padding: 12px 25px;
+  border-radius: 8px; /* Rounded corners */
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 1.1em;
+  /* margin-top: 2em; Remove or comment out margin */
+  transition: transform 0.2s ease;
+  position: fixed; /* Fix position relative to viewport */
+  bottom: 30px; /* Position from bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Fine-tune centering */
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.app-download-button:hover {
+  transform: scale(1.05); /* Slight grow effect on hover */
+}
+
 /* Re-add styles for text-based logo */
 .contacto-logo {
   font-family: 'Courier New', Courier, monospace; /* 픽셀 느낌 폰트 시도 */
