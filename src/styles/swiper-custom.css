@@ -1,0 +1,22 @@
+/* Swiper 페이지네이션 (dot) 색상 변경 */
+.swiper-pagination-bullet {
+    background-color: #D9D9D9 !important; /* 기본 dot 색상 */
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #BAEF62 !important; /* 활성화된 dot 색상 */
+    opacity: 1;
+}
+
+/* Swiper 페이지네이션 크기 조정 */
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+}
+
+/* Swiper 페이지네이션 하단 위치 조정 */
+.swiper-pagination {
+    bottom: 0px !important; /* 페이지네이션 위치 조정 */
+}

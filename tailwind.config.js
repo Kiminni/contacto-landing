@@ -1,12 +1,16 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-	theme: {
-		extend: {
-			colors: {
-				'contacto': "#2ea7e0",
-			},
-		},
-	},
-	plugins: [],
-};
+module.exports = {
+  content: ['./index.html','./src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        'brand-blue1': '#2EA7E0',
+        'brand-peach': '#F5DFDB',
+        'brand-green': '#BAEF62',
+        'orange-color': '#EA5514',
+        'brand-blue2': '#5B9DFF',
+      },
+    },
+  },
+  plugins: [],
+}
