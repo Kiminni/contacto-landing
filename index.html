@@ -1,13 +1,146 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>Contacto+</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/index.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div id="app">
+      <section id="hero">
+        <!-- 도예가와 협업하고 싶다면? -->
+        <h1>도예가와<br>협업하고 싶다면?</h1>
+        <p>스쿱, e-액자, 나프톤,</p>
+        <p>위-픽처스 등 다양한 협업 채널</p>
+      </section>
+      <section id="feature1">
+        <!-- QX 퀴즈타운 -->
+        <img src="/src/assets/images/image.png" alt="Contacto+ 앱 QX 퀴즈타운 화면 목업" style="max-width: 250px; height: auto; margin-bottom: 20px;">
+        <h2>OX 퀴즈하듯</h2>
+        <h2>관심있는 창작자에게</h2>
+        <h2>호감을 표시하면 끝.</h2>
+        
+        <p class="feature1-subtext">그 어떤 플랫폼보다 쉽게 매칭이 됩니다.</p>
+      </section>
+      <section id="feature2">
+        <!-- 전 세계에 있는 문화-예술 창작자들에게... -->
+        <p class="feature2-intro">더 성장하고 싶은 창작자라면?</p>
+        <h2>전 세계에 있는<br>문화•예술 창작자들에게<br>컨택토 해보세요!</h2>
+        <div class="button-container">
+          <button class="feature2-button lime">콜라보할 팀을 찾고있어요!</button>
+          <button class="feature2-button blue">브랜드를 만들어 보고 싶어요.</button>
+          <button class="feature2-button orange">친하게 지낼 동료 어디 없나요?</button>
+          <button class="feature2-button yellow">합동 전시 같이 할 작가 없나요?</button>
+          <button class="feature2-button pink">아트 레지던시 자리 남아요~</button>
+        </div>
+      </section>
+      <section id="feature3">
+        <!-- 디자인, 패션, 예술... -->
+        <p class="feature3-intro">다양한 창작분야와 협업해보고 싶지 않나요?</p>
+        <h2 class="feature3-heading">디자인, 패션, 예술,<br>공예, 미디어, 음악까지!</h2>
+        <div class="tag-grid">
+          <div class="feature3-tag tag-yellow">Industrial</div>
+          <div class="feature3-tag tag-blue">Graphic</div>
+          <div class="feature3-tag tag-orange">Fashion</div>
+          <div class="feature3-tag tag-pink">UX/UI</div>
+          <div class="feature3-tag tag-lime">Branding</div>
+          <div class="feature3-tag tag-yellow">Motion Graphic</div>
+          <div class="feature3-tag tag-lime">Animation</div>
+          <div class="feature3-tag tag-pink">Illustration</div>
+          <div class="feature3-tag tag-orange">Interior</div>
+          <div class="feature3-tag tag-yellow">Architecture</div>
+          <div class="feature3-tag tag-green">Textile</div>
+          <div class="feature3-tag tag-purple">Fabric Product</div>
+          <div class="feature3-tag tag-green">Styling</div>
+          <div class="feature3-tag tag-red">Bag Design</div>
+          <div class="feature3-tag tag-yellow">Shoes Design</div>
+          <div class="feature3-tag tag-orange">Painting</div>
+          <div class="feature3-tag tag-lime">Ridicule</div>
+          <div class="feature3-tag tag-pink">Kinetic</div>
+          <div class="feature3-tag tag-lime">Ceramics</div>
+          <div class="feature3-tag tag-yellow">Wood</div>
+          <div class="feature3-tag tag-green">Jewel</div>
+          <div class="feature3-tag tag-orange">Metal</div>
+          <div class="feature3-tag tag-purple">Glass</div>
+          <div class="feature3-tag tag-blue">Printmaking</div>
+          <div class="feature3-tag tag-yellow">Aesthetics</div>
+          <div class="feature3-tag tag-purple">Tuffting</div>
+          <div class="feature3-tag tag-green">Writing</div>
+          <div class="feature3-tag tag-lime">Poet</div>
+          <div class="feature3-tag tag-pink">Video</div>
+          <div class="feature3-tag tag-red">Photo</div>
+          <div class="feature3-tag tag-green">Advertising</div>
+          <div class="feature3-tag tag-blue">Scenario</div>
+          <div class="feature3-tag tag-red">Compose</div>
+        </div>
+        <div class="ellipsis-icon">
+          <span></span><span></span><span></span>
+        </div>
+        <p class="feature3-outro">다양한 분야의 창작자들이 활동하고 있습니다!</p>
+      </section>
+      <section id="feature4">
+        <!-- 서로 관심있다면 바로 매칭... -->
+        <img src="/src/assets/images/image2.png" alt="Contacto+ 앱 매칭 화면 목업" style="max-width: 250px; height: auto; margin-bottom: 20px;">
+        <h2>서로 관심있다면<br>바로 매칭되어 이야기를<br>나눠볼 수 있습니다.</h2>
+        <p class="feature4-subtext">매칭된다면 반갑게 인사를 건네보세요!</p>
+      </section>
+      <section id="feature5">
+        <!-- CONTACTO+, 창작자들과의 스펙트럼... -->
+        <div class="logo-line">
+          <img src="/src/assets/images/image3.png" alt="Contacto Logo" class="contacto-logo-img">
+          <span class="logo-suffix-text">는</span>
+        </div>
+        <p class="feature5-text">창작활동의 스펙트럼을<br>넓힐 수 있는 기회입니다.</p>
+      </section>
+      <section id="feature6">
+        <!-- 해외의 아티스트와... -->
+        <div class="feature-mockup">
+          <img src="/src/assets/images/image4.png" alt="Contacto+ 앱 채팅 화면 목업" class="mockup-img">
+          <div class="chat-content">
+            <!-- Removed chat messages -->
+          </div>
+        </div>
+      </section>
+      <section id="feature7">
+        <!-- 작은 규모의 협력자들이... -->
+        <h2>해외의 아티스트와<br>친해질 수 있습니다!</h2>
+        <div class="feature-mockup">
+          <img src="/src/assets/images/image5.png" alt="Contacto+ 앱 해외 아티스트 연결 화면 목업" class="mockup-img">
+        </div>
+      </section>
+      <section id="feature8">
+        <!-- 나와 결이 맞는 창작자들을... -->
+        <h2>작은 규모의 창작가들이<br>규모를 키울 수 있습니다.</h2>
+        <div class="feature-mockup">
+          <img src="/src/assets/images/image6.png" alt="Contacto+ 앱 규모 확장 화면 목업" class="mockup-img">
+        </div>
+        <h3>나와 결이 맞는 창작 동료를 <br>얻을 수 있는 놀이터입니다!</h3>
+        <h4>나와 결이 맞고 생각이 맞는 창작동료를 찾기 어렵지 않았나요? 컨택토에서 찾아보세요!</h4>
+      </section>
+      <section id="usage">
+        <!-- 이렇게 사용될 수 있어요! -->
+        <div class="carousel-container">
+          <div class="carousel-images">
+            <img src="/src/assets/images/image7_1.png" alt="Usage Image 1" class="carousel-img">
+            <img src="/src/assets/images/image7_2.png" alt="Usage Image 2" class="carousel-img">
+            <img src="/src/assets/images/image7_3.png" alt="Usage Image 3" class="carousel-img">
+            <img src="/src/assets/images/image7_4.png" alt="Usage Image 4" class="carousel-img">
+          </div>
+          <!-- Add navigation buttons/dots here if needed -->
+        </div>
+      </section>
+      <section id="cta">
+        <!-- CONTACTO+ 지금 바로 협업하세요! -->
+        <img src="/src/assets/images/image8.png" alt="Contacto App Mockups CTA" class="cta-mockups">
+        <h2 class="cta-text">CONTACTO에서<br>지금 바로 협업하세요!</h2>
+      </section>
+    </div>
+    <!-- If using React/Vue/etc., the script tag might be different -->
+    <!-- <script type="module" src="/src/main.tsx"></script> -->
   </body>
 </html>
