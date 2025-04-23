@@ -5,25 +5,15 @@ import { ReactSVG } from 'react-svg'
 import Usage from '../components/Usage.jsx'
 
 function Home() {
-	// const handleFeature2Click = (label) => {
-	// 	console.log("Feature 2 Button Clicked:", label);
-	// 	if (typeof gtag === "function") {
-	// 		gtag("event", "button_click", {
-	// 			event_category: "Feature2Buttons",
-	// 			event_label: label,
-	// 		});
-	// 	}
-	// };
-
-	// const handleCtaClick = () => {
-	// 	console.log("CTA App Download Button Clicked");
-	// 	if (typeof gtag === "function") {
-	// 		gtag("event", "button_click", {
-	// 			event_category: "CTA",
-	// 			event_label: "AppStoreDownload",
-	// 		});
-	// 	}
-	// };
+	const handleCtaClick = () => {
+		console.log("CTA App Download Button Clicked");
+		if (typeof window !== 'undefined' && typeof window.gtag === "function") {
+			window.gtag("event", "button_click", {
+				event_category: "CTA",
+				event_label: "AppStoreDownload",
+			});
+		}
+	};
 
 	return (
 		<div className="w-full min-w-[320px] h-full bg-brand-blue1 flex flex-col items-center text-center leading-tight">
@@ -284,7 +274,7 @@ function Home() {
 			<div className='fixed bottom-[70px] left-0 w-full flex justify-center z-50'>
 				<a
 					href="https://apps.apple.com/kr/app/contacto/id6736873767?utm_source=landing&utm_medium=organic&utm_campaign=general"
-					// onClick={handleCtaClick}
+					onClick={handleCtaClick}
 					className="py-1.5 px-11 bg-brand-green font-extrabold border-black border-2 cursor-pointer"
 					target="_blank"
 					rel="noopener noreferrer"
