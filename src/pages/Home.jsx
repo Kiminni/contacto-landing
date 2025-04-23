@@ -4,6 +4,13 @@ import Collabo from '../components/Collabo.jsx'
 import { ReactSVG } from 'react-svg'
 import Usage from '../components/Usage.jsx'
 
+import homeMockUp from '../assets/images/homeMockUp.png'
+import matchMockUp from '../assets/images/matchMockUp.png'
+import logo from '../assets/images/logo.svg'
+import chatView from '../assets/images/chatView.svg'
+import matchView from '../assets/images/matchView.svg'
+import categoryView from '../assets/images/categoryView.svg'
+
 function Home() {
 	const handleCtaClick = () => {
 		console.log("CTA App Download Button Clicked");
@@ -24,7 +31,7 @@ function Home() {
 			</section>
 			<section className="w-full py-[180px] bg-black flex flex-col items-center justify-center text-brand-blue2">
 				<img
-					src="/src/assets/images/homeMockUp.png"
+					src={homeMockUp}
 					alt="Home View"
 					className="w-[230px] object-contain"
 				/>
@@ -124,7 +131,7 @@ function Home() {
 			</section>
 			<section className="w-full py-[180px] bg-black flex flex-col items-center justify-center text-brand-blue2">
 				<img
-					src="/src/assets/images/matchMockUp.png"
+					src={matchMockUp}
 					alt="Match View"
 					className="w-[230px] object-contain"
 				/>
@@ -139,7 +146,7 @@ function Home() {
 				<div className="mb-[300px]">
 					<div className="flex justify-center items-end gap-2 mb-[40px]">
 						<img
-							src="/src/assets/images/logo.svg"
+							src={logo}
 							alt="Contacto Logo"
 							className="w-[220px] object-contain"
 						/>
@@ -152,7 +159,7 @@ function Home() {
 					<div className="relative flex flex-col items-center">
 						<div className="relative w-[300px] h-[450px] mb-[40px]">
 							<img
-								src="/src/assets/images/chatView.svg"
+								src={chatView}
 								alt="Contacto+ 앱 채팅 화면 목업"
 								className="w-full h-full object-cover object-top"
 							/>
@@ -174,7 +181,7 @@ function Home() {
 					<div className="relative flex flex-col items-center">
 						<div className="relative w-[300px] h-[480px] mb-[40px]">
 							<img
-								src="/src/assets/images/matchView.svg"
+								src={matchView}
 								alt="Contacto+ 앱 채팅 화면 목업"
 								className="w-full h-full object-cover object-top"
 							/>
@@ -197,7 +204,7 @@ function Home() {
 					<div className="relative flex flex-col items-center">
 						<div className="relative w-[300px] h-[500px] mb-[40px]">
 							<img
-								src="/src/assets/images/categoryView.svg"
+								src={categoryView}
 								alt="Contacto+ 앱 채팅 화면 목업"
 								className="w-full h-full object-cover object-top"
 							/>
@@ -227,7 +234,7 @@ function Home() {
 			<section className="w-full py-[180px]">
 				<div className="flex justify-center items-end gap-1">
 					<img
-						src="/src/assets/images/logo.svg"
+						src={logo}
 						alt="Contacto Logo"
 						className="h-[25px] object-contain"
 					/>
@@ -242,12 +249,12 @@ function Home() {
 			<section className="w-full py-[180px] bg-black flex flex-col items-center justify-center">
 				<div className="h-[300px] flex gap-2 mb-[50px]">
 					<img
-						src="/src/assets/images/homeMockUp.png"
+						src={homeMockUp}
 						alt="Contacto App Mockups CTA"
 						className="h-full object-contain"
 					/>
 					<img
-						src="/src/assets/images/matchMockUp.png"
+						src={matchMockUp}
 						alt="Contacto App Mockups CTA"
 						className="h-full object-contain"
 					/>
@@ -255,7 +262,7 @@ function Home() {
 				<div className="flex justify-center items-end gap-1 text-brand-green">
 					<div className='w-[150px] h-[25px]'>
 						<ReactSVG
-							src="/src/assets/images/logo.svg"
+							src={logo}
 							alt="Contacto Logo"
 							beforeInjection={(svg) => {
 								svg.removeAttribute('width')
