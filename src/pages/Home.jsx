@@ -280,7 +280,7 @@ function Home() {
 			{/* CTA Button */}
 			<div className='fixed bottom-[70px] left-0 w-full flex justify-center z-50'>
 				<a
-					href="https://apps.apple.com/kr/app/contacto/id6736873767?utm_source=landing&utm_medium=organic&utm_campaign=general"
+					href="https://apps.apple.com/kr/app/contacto/id6736873767"
 					onClick={handleCtaClick}
 					className="py-1.5 px-11 bg-brand-green font-extrabold border-black border-2 cursor-pointer"
 					target="_blank"
