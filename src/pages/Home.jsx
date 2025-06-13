@@ -193,7 +193,7 @@ function Home() {
 				</div>
 			</section>
 			{/* Swipe carousel */}
-			<section className="w-full py-[180px]">
+			<section className="w-full py-[180px] flex flex-col items-center justify-center">
 				<div className="flex justify-center items-end gap-1">
 					<img
 						src={logo}
