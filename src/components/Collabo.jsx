@@ -4,12 +4,13 @@ import collabo1 from '../assets/images/collabo1.svg'
 import collabo2 from '../assets/images/collabo2.svg'
 import collabo3 from '../assets/images/collabo3.svg'
 import collabo4 from '../assets/images/collabo4.svg'
+import { useTranslation } from 'react-i18next';
 
 const collabos = [
-  ['도예가', collabo1],
-  ['가방브랜드', collabo2],
-  ['일러스트작가', collabo3],
-  ['예술가', collabo4],
+  ['collabo_artist_potter', collabo1],
+  ['collabo_brand_bag', collabo2],
+  ['collabo_artist_illustrator', collabo3],
+  ['collabo_artist_artist', collabo4],
 ]
 
 const itemVariants = {
@@ -30,6 +31,7 @@ const itemVariants = {
 
 export default function Collabo() {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const { t } = useTranslation();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -53,22 +55,18 @@ export default function Collabo() {
             <img
               src={collabos[currentIndex][1]}
               className='w-full h-full object-contain absolute'
-              alt={collabos[currentIndex][0]}
+              alt={t(collabos[currentIndex][0])}
             />
             <div className='absolute flex flex-col items-center justify-center font-extrabold'>
               <p className='text-[60px] leading-tight'>
-                {collabos[currentIndex][0]}와
+                {t('collabo_collaboration_question1', { artistName: t(collabos[currentIndex][0]) })}
               </p>
-              <p className='text-[30px] leading-tight'>협업하고 싶다면?</p>
+              <p className='text-[30px] leading-tight'>{t('collabo_collaboration_question2')}</p>
             </div>
           </motion.div>
         </AnimatePresence>
       </div>
-      <p className='font-bold'>
-        스와이프 매칭 시스템으로
-        <br />
-        쉽고 빠르게 대화할 수 있는 컨택토
-      </p>
+      <p className='font-bold' dangerouslySetInnerHTML={{ __html: t('collabo_swipe_matching_system') }} />
     </div>
   )
 }
