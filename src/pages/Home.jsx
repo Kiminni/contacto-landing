@@ -26,7 +26,7 @@ function Home() {
 
 		// Facebook Pixel ViewContent 이벤트
 		if (typeof window !== 'undefined' && typeof window.fbq === "function") {
-			window.fbq('track', 'ClickedButton');
+			window.fbq('track', 'ViewContent');
 		}
 	};
 
