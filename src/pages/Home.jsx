@@ -23,7 +23,14 @@ function Home() {
 				event_label: "AppStoreDownload",
 			});
 		}
+
+		// Facebook Pixel ViewContent 이벤트
+		if (typeof window !== 'undefined' && typeof window.fbq === "function") {
+			window.fbq('track', 'ClickedButton');
+		}
 	};
+
+	
 
 	return (
 		<div className="w-full min-w-[320px] h-full bg-brand-blue1 flex flex-col items-center text-center leading-tight">
