@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home.jsx';
+import Event from './pages/Event.jsx';
 import { useTranslation } from 'react-i18next';
 
 function App() {
@@ -9,6 +10,8 @@ function App() {
 		<BrowserRouter>
 			<LanguageSetter />
 			<Routes>
+				<Route path="/event" element={<Event />} />
+				<Route path="/:lang?/event" element={<Event />} />
 				<Route path="/:lang?" element={<Home />} />
 			</Routes>
 		</BrowserRouter>

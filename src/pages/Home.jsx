@@ -15,21 +15,21 @@ import categoryView from '../assets/images/categoryView.svg'
 function Home() {
 	const { t } = useTranslation();
 
-	const handleCtaClick = () => {
+	const handleCtaClick = (e) => {
 		console.log("CTA App Download Button Clicked");
+		
+		// Google Analytics
 		if (typeof window !== 'undefined' && typeof window.gtag === "function") {
 			window.gtag("event", "button_click", {
 				event_category: "CTA",
 				event_label: "AppStoreDownload",
 			});
 		}
-
 		// Facebook Pixel ViewContent 이벤트
 		if (typeof window !== 'undefined' && typeof window.fbq === "function") {
 			console.log("event triggered");
 			window.fbq('track', 'ViewContent');
 		}
-		
 	};
 
 	
