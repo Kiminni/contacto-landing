@@ -43,7 +43,7 @@ function Event() {
 
 	return (
 		<div className="w-full min-h-screen bg-black flex flex-col items-center">
-		{/* 첫 번째 이미지 섹션 - 버튼 포함 */}
+		{/* 첫 번째 이미지 섹션 */}
 		<div className="relative w-full max-h-screen flex justify-center">
 			<img 
 				ref={firstImageRef}
@@ -51,40 +51,6 @@ function Event() {
 				alt="CONTACTO App Download Event" 
 				className="max-h-screen w-auto object-contain"
 			/>
-				
-			{/* 다운로드 버튼 - 왼쪽 하단 고정 */}
-			<button
-				onClick={handleDownload}
-				className="absolute cursor-pointer z-50"
-				style={{
-					bottom: imageWidth ? `${imageWidth * 0.02}px` : '8px',
-					left: imageWidth ? `calc((100vw - ${imageWidth}px) / 2 + ${imageWidth * 0.02}px)` : '8px',
-					width: imageWidth ? `${imageWidth * 0.15}px` : 'auto'
-				}}
-			>
-				<img 
-					src={downloadButton} 
-					alt="Download" 
-					className="w-full h-auto"
-				/>
-			</button>
-
-			{/* 이벤트 폼 버튼 - 오른쪽 하단 고정 */}
-			<button
-				onClick={handleEventForm}
-				className="absolute cursor-pointer z-50"
-				style={{
-					bottom: imageWidth ? `${imageWidth * 0.02}px` : '8px',
-					right: imageWidth ? `calc((100vw - ${imageWidth}px) / 2 + ${imageWidth * 0.02}px)` : '8px',
-					width: imageWidth ? `${imageWidth * 0.15}px` : 'auto'
-				}}
-			>
-				<img 
-					src={eventFormButton} 
-					alt="Event Form" 
-					className="w-full h-auto"
-				/>
-			</button>
 			</div>
 			
 		{/* 두 번째 이미지 */}
@@ -109,6 +75,38 @@ function Event() {
 				/>
 			</button>
 		</div>
+
+		{/* 다운로드 버튼 - 이미지 왼쪽 하단 고정 */}
+		<button
+			onClick={handleDownload}
+			className="fixed bottom-4 cursor-pointer z-50"
+			style={{
+				left: imageWidth ? `calc((100vw - ${imageWidth}px) / 2)` : '0',
+				width: imageWidth ? `${imageWidth * 0.15}px` : '128px'
+			}}
+		>
+			<img 
+				src={downloadButton} 
+				alt="Download" 
+				className="w-full h-auto"
+			/>
+		</button>
+
+		{/* 이벤트 폼 버튼 - 이미지 오른쪽 하단 고정 */}
+		<button
+			onClick={handleEventForm}
+			className="fixed bottom-4 cursor-pointer z-50"
+			style={{
+				right: imageWidth ? `calc((100vw - ${imageWidth}px) / 2)` : '0',
+				width: imageWidth ? `${imageWidth * 0.15}px` : '128px'
+			}}
+		>
+			<img 
+				src={eventFormButton} 
+				alt="Event Form" 
+				className="w-full h-auto"
+			/>
+		</button>
 		</div>
 	);
 }
