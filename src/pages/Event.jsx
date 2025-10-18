@@ -5,6 +5,7 @@ import mobileEventLanding from '../assets/images/mobileEventLanding.png';
 import downloadButton from '../assets/images/downloadButton.png';
 import eventFormButton from '../assets/images/eventFormButton.png';
 import landingPageButton from '../assets/images/landingPageButton.png';
+import mobileLandingPageButton from '../assets/images/mobileLandingPageButton.png';
 
 function Event() {
 	const firstImageRef = useRef(null);
@@ -47,7 +48,7 @@ function Event() {
 	};
 
 	const handleEventForm = () => {
-		window.open('https://forms.gle/your-form-id', '_blank');
+		window.open('https://docs.google.com/forms/d/e/1FAIpQLScRMfNrABUU-R8KSjbJIuMcBZ-HsIxRcMx6SackZSljuQ51og/viewform?usp=header', '_blank');
 	};
 
 	const handleLandingPage = () => {
@@ -65,6 +66,18 @@ function Event() {
 						alt="CONTACTO Mobile Event" 
 						className="w-full h-auto object-contain"
 					/>
+					
+					{/* 모바일 랜딩 페이지 버튼 */}
+					<button
+						onClick={handleLandingPage}
+						className="cursor-pointer w-full"
+					>
+						<img 
+							src={mobileLandingPageButton} 
+							alt="Go to Landing Page" 
+							className="w-full h-auto"
+						/>
+					</button>
 					
 					{/* 모바일 플로팅 버튼 - 화면 하단 고정, 세로 배치 */}
 					<div className="fixed bottom-4 left-0 right-0 z-50 flex flex-col items-start gap-2 px-4">
